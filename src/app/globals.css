@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* O modo escuro segue o atributo data-theme no <html>, não só a preferência do sistema. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+}
+
+:root {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+dialog::backdrop {
+  background: rgb(15 23 42 / 0.5);
+}
